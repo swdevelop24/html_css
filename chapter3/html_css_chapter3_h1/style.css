@@ -1,0 +1,27 @@
+.box {
+  border: 50px solid red;
+  width: 200px;
+  padding: 50px;
+  margin-bottom: 20px;
+}
+.green {
+  border-color: green;
+}
+
+.blue {
+  border-color: blue;
+}
+
+.midnight-blue{
+    border-color:#2c3e50;
+}
+
+/* to remove the box thereby repositioning the other box */
+.box-remove{
+    display:none; 
+}
+
+/* to hide the box without moving the position */
+.box-hide{
+    visibility:hidden; 
+}
