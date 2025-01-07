@@ -1,0 +1,69 @@
+.box {
+  border: 50px solid red;
+  width: 200px;
+  padding: 50px;
+  margin-bottom: 20px;
+}
+.green {
+  border-color: green;
+}
+
+.blue {
+  border-color: blue;
+}
+
+.midnight-blue {
+  border-color: #2c3e50;
+}
+
+/* to remove the box thereby repositioning the other box */
+.box-remove {
+  display: none;
+}
+
+/* to hide the box without moving the position */
+.box-hide {
+  visibility: hidden;
+}
+
+h1 {
+  color: #9b59b6;
+}
+
+h1::before {
+  content: "Topic: ";
+}
+
+h1:first-child {
+  text-align: center;
+}
+
+p {
+  font-size: 16px;
+  font-family: Verdana;
+  font-style: italic;
+}
+
+.sub-header {
+  color: #2980b9;
+}
+
+p::first-letter {
+  font-size: 200%;
+  color: #2980b9;
+}
+
+.challenge2 {
+  background-color: #fff;
+  background-image: linear-gradient(
+      90deg,
+      transparent 79px,
+      #abced4 79px,
+      #abced4 81px,
+      transparent 81px
+    ),
+    linear-gradient(#eee 0.1em, transparent 0.1em);
+  background-size: 100% 1.2em;
+
+  margin-left: 10%;
+}
