@@ -1,0 +1,36 @@
+.btns {
+  margin-top: 150px;
+  margin-left:100px;
+}
+
+.btns:active{
+    text-decoration:underline;
+}
+.btn1 {
+  display: block;
+  width: 115px;
+  height: 25px;
+  background-color: #e7e7e7;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  color: black;
+  font-weight: bold;
+  line-height: 25px;
+  margin-bottom: 50px;
+  text-decoration:none;
+}
+
+.btn2 {
+  display: block;
+  width: 115px;
+  height: 25px;
+  background-color: #008cba;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  line-height: 25px;
+  text-decoration:none;
+}
