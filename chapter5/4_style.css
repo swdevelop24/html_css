@@ -1,0 +1,17 @@
+.box{
+    width:200px;
+    height:200px;
+    color:white;
+    background-color: black;
+    position:relative;
+}
+
+.box2{
+    background-color:gray;
+}
+
+.box2-locate{
+    position:relative;
+    top:-100px;
+    left:100px;
+}

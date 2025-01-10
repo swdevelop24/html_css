@@ -1,0 +1,25 @@
+.main {
+  display: flex;
+  justify-content: center;
+}
+
+.outer {
+  width: 200px;
+  height: 200px;
+  color: white;
+  background-color: gray;
+  position: relative; 
+}
+
+.inner {
+  width: 100px;
+  height: 100px;
+  color: white;
+  background-color: black;
+}
+
+.inner-locate {
+  position: relative;
+  left: 50px;
+  top: 30px;
+}

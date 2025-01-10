@@ -1,0 +1,19 @@
+.main {
+  display: flex;
+  flex-direction:column;
+}
+
+.box {
+  width: 200px;
+  height: 200px;
+  background-color: black;
+  color: white;
+}
+
+.box-middle {
+  align-self: center;
+}
+
+.box-end {
+  align-self:flex-end;
+}
