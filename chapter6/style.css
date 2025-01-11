@@ -29,7 +29,7 @@ nav {
 
 
 main {
-    height: 969px;
+    height: 968px;
     background-color: rgb(41, 65, 171);
     background-image: url(https://www-growth.scdn.co/static/home/bursts.svg);
     background-size: 175%;
@@ -45,7 +45,8 @@ main {
 }
 
 .headline {
-    font-size: 156px;
+    font-size: 146px;
+    line-height: 166px;
     color: #1ed760;
     font-weight: 900;
     position: relative;
