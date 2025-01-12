@@ -42,6 +42,8 @@ nav {
 }
 
 .text-animation{
+    color: white;
+    font-family: italic;
     white-space: nowrap;
     overflow: hidden;
     width: 100%;
@@ -51,10 +53,9 @@ nav {
     @keyframes animtext { 
     from {
         width: 0;
-       transition: all 5s ease-in-out;
+       transition: all 3s ease-in-out;
     } 
 }
-
 
 
 footer {
