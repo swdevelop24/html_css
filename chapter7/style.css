@@ -53,6 +53,27 @@ nav {
     transition: 0.5s ease-in-out;
 }
 
+.card-img-top {
+    width: 100%;
+    /* 카드 너비에 맞춤 */
+    aspect-ratio: 16 / 9;
+    /* 가로:세로 비율 유지 */
+    object-fit: cover;
+    /* 이미지 비율 유지하며 잘 맞추기 */
+}
+
+.card {
+    height: 100%;
+    /* 카드가 내용물에 따라 높이를 자동 조정 */
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .text-animation{
     color: white;
     font-family: italic;
