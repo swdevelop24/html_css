@@ -1,0 +1,159 @@
+body {
+    background-image: url("https://plus.unsplash.com/premium_photo-1670493556860-13e006e6faa4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8d2ludGVyfGVufDB8fDB8fHww");
+    background-position: center;
+    background-size: cover;
+    margin: 0px;
+    padding-bottom: 0;
+    min-height: 100vh;
+}
+
+.btn-outline-success {
+    color: black;
+    border-color: gray;
+}
+
+.btn-outline-success:hover {
+    background-color: gray;
+    color: white;
+    border-color: black;
+}
+
+.login{
+    margin-left:0.5rem;
+}
+
+@media screen and (max-width: 62rem) {
+    .login{
+        margin-left:-0.2rem;
+        margin-top: 0.8rem;
+    }
+}
+
+
+nav {
+    padding: 2rem;
+    position: fixed;
+    background-color: #787878;
+}
+
+.carousel-item img {
+    width: 100vw;
+    /* 화면 너비 */
+    height: 70vh;
+    /* 화면 높이의 70% */
+    object-fit: cover;
+    /* 비율 유지하며 요소 채움 */
+    object-position: center;
+    /*이미지 중앙 정렬*/
+}
+
+
+.card:hover {
+    transform: scale(1.05);
+    transition: 0.5s ease-in-out;
+}
+
+.card-img-top {
+    width: 100%;
+    /* 카드 너비에 맞춤 */
+    aspect-ratio: 16 / 9;
+    /* 가로:세로 비율 유지 */
+    object-fit: cover;
+    /* 이미지 비율 유지하며 잘 맞추기 */
+}
+
+.card {
+    height: 100%;
+    /* 카드가 내용물에 따라 높이를 자동 조정 */
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-animation{
+    color: white;
+    font-family: italic;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+    animation: animtext 4s steps(80, end); 
+     transition: all cubic-bezier(0.1, 0.7, 1.0, 0.1);
+    }
+    @keyframes animtext { 
+    from {
+        width: 0;
+       transition: all 3s ease-in-out;
+    } 
+}
+
+
+footer {
+    background: darkgrey;
+    font-size: 1rem;
+    position: absolute;
+    width: 100%;
+    background: darkgrey;
+    font-size: 1rem;
+}
+
+.first-line {
+    color: white;
+    border-bottom: 1px solid #C1C1C1;
+}
+
+.second-line a {
+    color: white;
+    text-decoration: none;
+}
+
+.flag {
+    color: white;
+}
+
+.mobile-footer {
+    border-top: 1px solid #C1C1C1;
+    color: white;
+    text-align: center;
+    font-size: 1.125rem;
+    font-weight: 300;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    align-items: center;
+    display: none;
+}
+
+@media screen and (max-width: 48rem) {
+    .second-line {
+        padding: 0 2rem;
+        display: flex;
+        flex-direction: column; /* 열 방향 정렬 */
+        align-items: center; /* 가운데 정렬 */
+        text-align: center; /* 텍스트 중앙 정렬 */
+    }
+
+    .second-line a {
+        margin: 5rem 0; /* 링크 간격 추가 */
+    }
+
+    .flag {
+        display: none;
+    }
+
+    .first-line {
+        text-align: center;
+    }
+
+    .mobile-footer {
+        display: block;
+    }
+}
+
+.flag-img{
+    margin: 0 0.5rem;
+}
+
+
