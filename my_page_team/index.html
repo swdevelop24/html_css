@@ -318,77 +318,75 @@
 
 
 
-
-    <테스트>
-    <a name="Highlight">
-      <section id="interview-section" class="container mt-5 mb-5">
-        <div class="row align-items-stretch">
-          <!-- Left Video (Responsive) -->
-          
-    
-          <!-- Card Content (Text) -->
-          <div class="col-12 col-lg-4 d-flex flex-column justify-content-center align-items-center text-center">
-            <h2 class="display-5">Best of Soccer TV</h2>
-            <h3 class="display-7">Blind Ranking</h3>
-            <button type="button" class="btn btn-secondary btn-lg interview_custom_btn mt-3" id="watchBtn2">
-              Watch Now <i class="fa-solid fa-play"></i>
-            </button>
-    
-            <!-- Second Video Container -->
-            <div id="videoContainer2"
-              style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.8); z-index: 1050; align-items: center; justify-content: center; display: flex;">
-              <iframe id="videoPlayer2"
-                width="90%"
-                height="50%"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen>
-              </iframe>
-            </div>
+    <section id="interview-section" class="container mt-5 mb-5">
+      <div class="row align-items-stretch">
+        <!-- Left Video (Responsive) -->
+        <div class="col-12 col-lg-8 d-flex">
+          <div class="ratio ratio-16x9 w-100">
+            <iframe class="interview_custom" 
+              src="https://www.youtube.com/embed/b4_PA7GsLwA" 
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" 
+              allowfullscreen>
+            </iframe>
           </div>
         </div>
-      </section>
     
-      <script>
-        // Watch Video 2 Button Click
-        document.getElementById('watchBtn2').addEventListener('click', function () {
+        <!-- Card Content (Text) -->
+        <div class="col-12 col-lg-4 d-flex flex-column justify-content-center align-items-center text-center">
+          <h2 class="display-5">Best of Soccer TV</h2>
+          <h3 class="display-7">Blind Ranking</h3>
+          <button type="button" class="btn btn-secondary btn-lg interview_custom_btn mt-3" id="watchBtn2">
+            Watch Now <i class="fa-solid fa-play"></i>
+          </button>
+          
+          <!-- Second Video Container -->
+          <div id="videoContainer2" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 1000;">
+            <iframe id="videoPlayer2" 
+              width="100%" 
+              height="100%" 
+              src="" 
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" 
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <script>
+      // Watch Video 2 Button Click
+      document.getElementById('watchBtn2').addEventListener('click', function () {
+        const videoContainer2 = document.getElementById('videoContainer2');
+        videoContainer2.style.display = 'block';
+    
+        const videoPlayer2 = document.getElementById('videoPlayer2');
+        videoPlayer2.src = "https://www.youtube.com/embed/b4_PA7GsLwA?autoplay=1"; // Enable autoplay for the second video
+      });
+    
+      // Hide Video Container when clicked outside
+      document.getElementById('videoContainer2').addEventListener('click', function (event) {
+        if (event.target === this) {
           const videoContainer2 = document.getElementById('videoContainer2');
-          videoContainer2.style.display = 'flex';
+          videoContainer2.style.display = 'none';
     
-          // Play the video (autoplay after user interaction)
           const videoPlayer2 = document.getElementById('videoPlayer2');
-          videoPlayer2.src = "https://www.youtube.com/embed/b4_PA7GsLwA?autoplay=1"; // Autoplay added
-        });
-    
-        // Close video container when clicking outside the video
-        document.getElementById('videoContainer2').addEventListener('click', function (event) {
-          if (event.target === this) {
-            const videoContainer2 = document.getElementById('videoContainer2');
-            videoContainer2.style.display = 'none';
-    
-            // Stop the video by clearing src
-            const videoPlayer2 = document.getElementById('videoPlayer2');
-            videoPlayer2.src = ""; // Stops the video
-          }
-        });
-      </script>
-   
-  
-    
-  
-  
-<테스트 end>
+          videoPlayer2.src = ""; // Stop the video
+        }
+      });
+    </script>
+
+
     <a name="Highlight">
       <section id="interview-section" class="container mt-5 mb-5">
         <div class="row align-items-stretch"> <!-- align-items-stretch로 두 열 높이를 동일하게 -->
           <!-- Left Video (Responsive) -->
-          <div class="col-11 col-lg-8 d-flex"> <!-- d-flex 추가로 높이 조정 -->
+          <div class="col-12 col-lg-8 d-flex"> <!-- d-flex 추가로 높이 조정 -->
             <div class="ratio ratio-16x9 w-100"> <!-- w-100로 너비를 100%로 설정 -->
-              <iframe class="interview_custom" 
-      src="https://www.youtube.com/embed/b4_PA7GsLwA" 
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" 
-      allowfullscreen></iframe>
+              <iframe class="interview_custom" src="https://www.youtube.com/embed/b4_PA7GsLwA" frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
             </div>
           </div>
 
