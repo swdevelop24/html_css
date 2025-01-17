@@ -316,7 +316,6 @@
     </section>
 
 
-
     <section id="interview-section" class="container mt-5 mb-5">
       <div class="row align-items-stretch">
         <!-- Left Video (Responsive) -->
@@ -324,7 +323,7 @@
           <div class="ratio ratio-16x9 w-100">
             <iframe id="mainVideoPlayer" 
               class="interview_custom" 
-              src="https://www.youtube.com/embed/b4_PA7GsLwA?rel=0" 
+              src="https://www.youtube.com/embed/b4_PA7GsLwA?autoplay=1&mute=1" 
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" 
               allowfullscreen 
@@ -364,16 +363,16 @@
       const videoContainer2 = document.getElementById('videoContainer2');
       const videoPlayer2 = document.getElementById('videoPlayer2');
     
-      // Play video when the main video player iframe is clicked
-      mainVideoPlayer.addEventListener('click', function () {
-        mainVideoPlayer.src = "https://www.youtube.com/embed/b4_PA7GsLwA?autoplay=1&rel=0"; // Play video with autoplay
-      });
+      // Automatically play the main video once the page is loaded
+      window.onload = function() {
+        mainVideoPlayer.src = "https://www.youtube.com/embed/b4_PA7GsLwA?autoplay=1&mute=1"; // Play video with autoplay
+      };
     
       // Watch Video 2 Button Click
       watchBtn2.addEventListener('click', function () {
         videoOverlay.style.display = 'block'; // Show overlay
         videoContainer2.style.display = 'block'; // Show video container
-        videoPlayer2.src = "https://www.youtube.com/embed/b4_PA7GsLwA?autoplay=1&rel=0"; // Play video with autoplay
+        videoPlayer2.src = "https://www.youtube.com/embed/b4_PA7GsLwA?autoplay=1&mute=1"; // Play video with autoplay
       });
     
       // Hide video and stop playback when overlay is clicked
