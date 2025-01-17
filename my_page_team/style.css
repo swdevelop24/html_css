@@ -1,4 +1,4 @@
- body {
+body {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   background-color: black;
   color: white;
@@ -10,7 +10,6 @@
   object-fit: cover;
   /* 비율 유지하며 요소 채움 */
   object-position: center;
-
 
 }
 
@@ -93,12 +92,24 @@
 .interview_custom{
   background-color: black;
   color: white;
-  border: black  solid;
-  padding-left: 5rem;
-  aspect-ratio: 16/9
+  aspect-ratio: 16/9;
 }
+/* @media (min-width: 1700px){
+  .interview_custom{
+    background-color: black;
+    color: white;
+    aspect-ratio: 16/9;
+    margin-left: -10rem;
+  }  
+} */
 
 
+.interview_custom_text{
+  background-color: black;
+  color: white;
+  text-align: left;
+  aspect-ratio: 16/9;
+}
 
 .interview_custom_btn{
   background-color: white;
@@ -170,6 +181,10 @@
   color: black;
 }
 
+.custom_below_interview{
+  margin-left:5rem;
+  margin-right:4rem;
+}
 
 /*footer*/
 .footer-second {
