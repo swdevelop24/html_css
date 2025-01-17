@@ -318,6 +318,7 @@
 
 
 
+    <a name="Highlight">
     <section id="interview-section" class="container mt-5 mb-5">
       <div class="row align-items-stretch">
         <!-- Left Video (Responsive) -->
@@ -341,7 +342,8 @@
           </button>
           
           <!-- Second Video Container -->
-          <div id="videoContainer2" style="display: none; position: fixed; top: 15%; left: 15%; width: 70%; height: 70%; background: rgba(0,0,0,0.8); z-index: 1000; border-radius: 10px; overflow: hidden;">
+          <div id="videoOverlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 999;"></div>
+          <div id="videoContainer2" style="display: none; position: fixed; top: 15%; left: 15%; width: 70%; height: 70%; background: #000; z-index: 1000; border-radius: 10px; overflow: hidden;">
             <iframe id="videoPlayer2" 
               width="100%" 
               height="100%" 
@@ -356,82 +358,31 @@
     </section>
     
     <script>
-      // Watch Video 2 Button Click
-      document.getElementById('watchBtn2').addEventListener('click', function () {
-        const videoContainer2 = document.getElementById('videoContainer2');
-        videoContainer2.style.display = 'block';
+      const watchBtn2 = document.getElementById('watchBtn2');
+      const videoOverlay = document.getElementById('videoOverlay');
+      const videoContainer2 = document.getElementById('videoContainer2');
+      const videoPlayer2 = document.getElementById('videoPlayer2');
     
-        const videoPlayer2 = document.getElementById('videoPlayer2');
-        videoPlayer2.src = "https://www.youtube.com/embed/b4_PA7GsLwA?autoplay=1"; // Enable autoplay for the second video
+      // Show video when button is clicked
+      watchBtn2.addEventListener('click', function () {
+        videoOverlay.style.display = 'block'; // Show overlay
+        videoContainer2.style.display = 'block'; // Show video container
+        videoPlayer2.src = "https://www.youtube.com/embed/b4_PA7GsLwA?autoplay=1"; // Autoplay video
       });
     
-      // Hide Video Container when clicked outside
-      document.getElementById('videoContainer2').addEventListener('click', function (event) {
-        const videoContainer2 = document.getElementById('videoContainer2');
-        const videoPlayer2 = document.getElementById('videoPlayer2');
+      // Hide video and stop playback when overlay or outside is clicked
+      videoOverlay.addEventListener('click', function () {
+        videoOverlay.style.display = 'none'; // Hide overlay
+        videoContainer2.style.display = 'none'; // Hide video container
+        videoPlayer2.src = ""; // Stop video
+      });
     
-        // If user clicks outside the iframe, close the container and stop the video
-        if (!event.target.closest('iframe')) {
-          videoContainer2.style.display = 'none'; // Hide the video container
-          videoPlayer2.src = ""; // Stop the video
-        }
+      // Prevent clicks inside the video container from closing it
+      videoContainer2.addEventListener('click', function (event) {
+        event.stopPropagation(); // Do nothing for clicks inside the container
       });
     </script>
-
-
-    <a name="Highlight">
-      <section id="interview-section" class="container mt-5 mb-5">
-        <div class="row align-items-stretch"> <!-- align-items-stretch로 두 열 높이를 동일하게 -->
-          <!-- Left Video (Responsive) -->
-          <div class="col-12 col-lg-8 d-flex"> <!-- d-flex 추가로 높이 조정 -->
-            <div class="ratio ratio-16x9 w-100"> <!-- w-100로 너비를 100%로 설정 -->
-              <iframe class="interview_custom" src="https://www.youtube.com/embed/b4_PA7GsLwA" frameborder="0"
-                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen></iframe>
-            </div>
-          </div>
-
-          <!-- Card Content (Text) -->
-          <div class="col-12 col-lg-4 d-flex flex-column justify-content-center align-items-center text-center">
-            <!-- align-items-center로 가운데 정렬 -->
-            <h2 class="display-5">Best of Soccer TV</h2>
-            <h3 class="display-7">Blind Ranking</h3>
-            <button type="button" class="btn btn-secondary btn-lg interview_custom_btn mt-3" id="watchBtn2">
-              Watch Now <i class="fa-solid fa-play"></i>
-            </button>
-            <!-- 두 번째 비디오 컨테이너 -->
-            <div id="videoContainer2" style="display: none;">
-              <iframe id="videoPlayer2" width="70%" height="70%" src="https://www.youtube.com/embed/b4_PA7GsLwA"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen>
-              </iframe>
-            </div>
-            <script>
-              // 'Watch Video 2' 버튼 클릭 시 두 번째 비디오 재생
-              document.getElementById('watchBtn2').addEventListener('click', function () {
-                const videoContainer2 = document.getElementById('videoContainer2');
-                videoContainer2.style.display = 'block'; // 두 번째 비디오 컨테이너를 화면 전체에 표시
-
-                // 두 번째 비디오 재생 (autoplay 포함 URL)
-                const videoPlayer2 = document.getElementById('videoPlayer2');
-                videoPlayer2.src = "https://www.youtube.com/embed/b4_PA7GsLwA"; // 자동 재생
-              });
-              document.getElementById('videoContainer2').addEventListener('click', function (event) {
-                if (event.target === this) {
-                  const videoContainer2 = document.getElementById('videoContainer2');
-                  videoContainer2.style.display = 'none'; // 두 번째 비디오 컨테이너 숨기기
-                  const videoPlayer2 = document.getElementById('videoPlayer2');
-                  videoPlayer2.src = ""; // 두 번째 비디오 멈춤
-                }
-              });
-            </script>
-
-
-
-          </div>
-        </div>
-      </section>
+    
 
 
 
