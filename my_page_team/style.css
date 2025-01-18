@@ -84,9 +84,6 @@ body {
 
 
 
-
-
-
 /*가운데 인터뷰*/
 .interview_image{
   width: 100%; 
@@ -122,7 +119,7 @@ body {
   color: black;
   margin-bottom: 3rem;
   width: 12rem;
-  height: 5rem;
+  height: 4rem;
 }
 
 .interview_custom_btn:hover{
@@ -140,7 +137,6 @@ body {
   display: none;
   z-index: 9999; /* 화면 위에 표시되도록 설정 */
 }
-
 
 
 
